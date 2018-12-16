@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/picture_layout">
+
+
+    <ViewAnimator
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/PictureViewAnimation">
+    </ViewAnimator>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/container"
+        android:layout_alignBottom="@+id/container">
+        <ImageButton
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_slide_button"
+            android:src="@android:drawable/arrow_down_float"
+            android:rotation="-90"
+            android:layout_gravity="center_vertical|end"
+            android:onClick="onRightArrowClicked" />
+
+        <ImageButton
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_slide_button"
+            android:src="@android:drawable/arrow_up_float"
+            android:rotation="-90"
+            android:layout_gravity="center_vertical|start"
+            android:onClick="onLeftArrowClicked" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dev 매니저</string>
+    <string name="storage_dir_name">DevMgr</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+</resources>

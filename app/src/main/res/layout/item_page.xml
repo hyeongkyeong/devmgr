@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coordinator_layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <!-- // Toolbar layout for actionbar -->
+
+            <!-- // Tab buttons -->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabTextColor="@color/colorPrimary"
+                app:tabSelectedTextColor="@color/colorAccent"
+                android:elevation="1dp"
+                android:background="@android:color/background_light" />
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/top_info"
+        android:layout_below="@+id/coordinator_layout">
+        <TextView
+            android:text="층: "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/item_view_floor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/item_view_location"
+            android:layout_width="199dp"
+            android:layout_height="match_parent"
+            android:text="장소: "
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   app:layout_behavior="@string/appbar_scrolling_view_behavior"
+   android:id="@+id/container"
+   android:elevation="6dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_info"
+        android:layout_weight="1"
+        android:layout_above="@+id/bottom_menu"
+        android:layout_marginBottom="60dp">
+
+
+       </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_menu"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_picture_button"
+            android:src="@android:drawable/ic_menu_camera"
+            android:onClick="onAddPictureButtonClicked" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_picture_button"
+            android:src="@android:drawable/ic_menu_delete"
+            android:onClick="onDeletePictureButtonClicked" />
+    </LinearLayout>
+
+</RelativeLayout>
